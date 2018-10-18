@@ -1,11 +1,12 @@
 # Making a simple server using Open62541 XML Compiler
 
 An OPC-UA information model can be encoded according to OPC-UA nodeset schema (Link: <https://opcfoundation.org/UA/schemas/1.04/>). When writing a new OPC-UA server, its information model can be encoded in XML format manually or by using a modeling tool. Once encoded, the XML file containing the server's nodeset schema can be compiled using SeRoNet's XML Nodeset Compiler to generate cpp code for a model-view-controller (MVC). By attaching an appropriate device driver model and by implementing the device controller, the OPC-UA server can be completed. Following is an example explaining the MVC architecture for a conveyor belt device running an OPC-UA server.
+
 ![IMG11](IMG11_ConveyorBelt_MVC_Diagram_Small.png)
 
 
 Following is an information model for a server. 
-
+```
 OPCUADeviceServer
 |--isReady        (Boolean    ReadOnly)
 |--pumpWater        (Method        Input:Time in seconds    Output:result code)
@@ -14,7 +15,7 @@ OPCUADeviceServer
 |--LED_RED        (Boolean    Read/Write)
 |--LED_YELLOW        (Boolean    Read/Write)
 |--LED_GREEN        (Boolean    Read/Write)
-
+```
 Following is a step-by-step walkthrough for generating an OPC-UA server from a given information model. 
 
 ## Step 1: Encoding server nodeset
