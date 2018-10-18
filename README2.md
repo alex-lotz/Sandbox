@@ -21,6 +21,9 @@ Following is a step-by-step walkthrough for generating an OPC-UA server from a g
 ## Step 1: Encoding server nodeset
 
 The information model for OPCUADeviceServer can be encoded according to OPC-UA nodeset schema to generate the following XML file.
+```
+OPCUADeviceServer.xml
+```
 
 <details><summary>View File Content</summary>
 <p>
@@ -364,8 +367,33 @@ The following command compiles the server nodeset XML file to generate cpp gen-c
 ```sh
 java -jar Open62541XmlCompiler.jar OPCUADeviceServer.xml ALL
 ```
+
 ![IMG11](IMG12_Compiling_server_nodeset_XML.png)
 
+```
+Compilation output:
+output_OPCUADeviceServer_2018_10_18_18_18_22/
+├── CMakeLists.txt				**CMAKE File**
+└── src-gen
+    ├── AbstractModel.cc
+    ├── AbstractModel.hh
+    ├── AbstractModelObserver.cc
+    ├── AbstractModelObserver.hh
+    ├── enumMethodCallStatusCode.hh
+    ├── OPCUADeviceServerController.cc
+    ├── OPCUADeviceServerController.hh
+    ├── OPCUADeviceServerInterface.hh
+    ├── OPCUADeviceServerOpcUaClient.cc
+    ├── OPCUADeviceServerOpcUaClient.hh
+    ├── OPCUADeviceServerOpcUaServer.cc
+    ├── OPCUADeviceServerOpcUaServer.hh
+    ├── OPCUADeviceServerServerMain.cc
+    ├── OPCUADeviceServerView.cc
+    ├── OPCUADeviceServerView.hh
+    ├── ValueType.cc
+    └── ValueType.hh
+
+```
 ## Step 3: Device driver models
 ## Step 4: Configuring generate code for a particular device driver model
 ## Step 5: Writing the device controller code
