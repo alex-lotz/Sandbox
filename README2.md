@@ -354,6 +354,18 @@ The information model for OPCUADeviceServer can be encoded according to OPC-UA n
 </details>
 
 ## Step 2: Compiling server nodeset XML to generate cpp gen-code
+```
+XML nodeset file  : OPCUADeviceServer.xml
+Compiler JAR file : Open62541XmlCompiler.jar
+Compiler Arguments: <XML-File> ( [ALL] | ([SERVER] [CLIENT] [MVC]) )
+
+```
+The following command compiles the server nodeset XML file to generate cpp gen-code
+```sh
+java -jar Open62541XmlCompiler.jar OPCUADeviceServer.xml ALL
+```
+![IMG11](IMG12_Compiling_server_nodeset_XML.png)
+
 ## Step 3: Device driver models
 ## Step 4: Configuring generate code for a particular device driver model
 ## Step 5: Writing the device controller code
