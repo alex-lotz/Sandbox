@@ -373,7 +373,7 @@ java -jar Open62541XmlCompiler.jar OPCUADeviceServer.xml ALL
 ```
 Compilation output:
 output_OPCUADeviceServer
-├── CMakeLists.txt				// FIXME : add path to device driver models
+├── CMakeLists.txt				
 └── src-gen
     ├── client
     │   ├── CMakeLists.txt
@@ -399,38 +399,16 @@ output_OPCUADeviceServer
         ├── AbstractModel.hh
         ├── AbstractModelObserver.cc
         ├── AbstractModelObserver.hh
-        ├── CMakeLists.txt
-        ├── OPCUADeviceServerController.cc
+        ├── CMakeLists.txt				// FIXME : add path to device driver models
+        ├── OPCUADeviceServerController.cc		// FIXME : implement all getter setter and call methods
         ├── OPCUADeviceServerController.hh
-        ├── OPCUADeviceServerServerMain.cc
-        ├── OPCUADeviceServerView.cc
-        ├── OPCUADeviceServerView.hh
+        ├── OPCUADeviceServerServerMain.cc		// FIXME : use your specific model instead of the AbstractModel
+        ├── OPCUADeviceServerView.cc			// FIXME1: use your specific model instead of the AbstractModel
+    							// FIXME2: implement OPCUADeviceServerView::update() method
+        ├── OPCUADeviceServerView.hh			// FIXME : use your specific model instead of the AbstractModel
         ├── OpcUaOPCUADeviceServer.cc
         └── OpcUaOPCUADeviceServer.hh
-
-
-output_OPCUADeviceServer_2018_10_18_18_18_22/
-├── CMakeLists.txt				// FIXME : add path to device driver models
-└── src-gen
-    ├── AbstractModel.cc
-    ├── AbstractModel.hh
-    ├── AbstractModelObserver.cc
-    ├── AbstractModelObserver.hh
-    ├── enumMethodCallStatusCode.hh
-    ├── OPCUADeviceServerController.cc		// FIXME : implement all getter setter and call methods
-    ├── OPCUADeviceServerController.hh
-    ├── OPCUADeviceServerInterface.hh
-    ├── OPCUADeviceServerOpcUaClient.cc
-    ├── OPCUADeviceServerOpcUaClient.hh
-    ├── OPCUADeviceServerOpcUaServer.cc
-    ├── OPCUADeviceServerOpcUaServer.hh
-    ├── OPCUADeviceServerServerMain.cc		// FIXME : use your specific model instead of the AbstractModel
-    ├── OPCUADeviceServerView.cc		// FIXME1: use your specific model instead of the AbstractModel
-    						// FIXME2: implement OPCUADeviceServerView::update() method
-    ├── OPCUADeviceServerView.hh		// FIXME : use your specific model instead of the AbstractModel
-    ├── ValueType.cc
-    └── ValueType.hh
-
+	
 ```
 ## Step 3: Device driver models
 ## Step 4: Configuring generate code for a particular device driver model
