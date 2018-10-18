@@ -368,10 +368,47 @@ The following command compiles the server nodeset XML file to generate cpp gen-c
 java -jar Open62541XmlCompiler.jar OPCUADeviceServer.xml ALL
 ```
 
-![IMG11](IMG12_Compiling_server_nodeset_XML.png)
+![IMG11](IMG12_Compiling_nodeset_XML.png)
 ---------------------------------------------------------------------------------#FIXME Add GenericClient files to this
 ```
 Compilation output:
+output_OPCUADeviceServer
+├── CMakeLists.txt				// FIXME : add path to device driver models
+└── src-gen
+    ├── client
+    │   ├── CMakeLists.txt
+    │   ├── OPCUADeviceServerClientMain.cc
+    │   ├── OpcUaOPCUADeviceServer.cc
+    │   └── OpcUaOPCUADeviceServer.hh
+    ├── CMakeLists.txt
+    ├── OPCUADeviceServerInterface.hh
+    ├── Open62541CppWrapper
+    │   ├── CMakeLists.txt
+    │   ├── OpcUaGenericClient.cc
+    │   ├── OpcUaGenericClient.hh
+    │   ├── OpcUaGenericServer.cc
+    │   ├── OpcUaGenericServer.hh
+    │   ├── OpcUaNodeId.cc
+    │   ├── OpcUaNodeId.hh
+    │   ├── OpcUaStatusCode.hh
+    │   ├── OpcUaValueType.cc
+    │   ├── OpcUaValueType.hh
+    │   └── Open62541CppWrapperConfig.cmake.in
+    └── server
+        ├── AbstractModel.cc
+        ├── AbstractModel.hh
+        ├── AbstractModelObserver.cc
+        ├── AbstractModelObserver.hh
+        ├── CMakeLists.txt
+        ├── OPCUADeviceServerController.cc
+        ├── OPCUADeviceServerController.hh
+        ├── OPCUADeviceServerServerMain.cc
+        ├── OPCUADeviceServerView.cc
+        ├── OPCUADeviceServerView.hh
+        ├── OpcUaOPCUADeviceServer.cc
+        └── OpcUaOPCUADeviceServer.hh
+
+
 output_OPCUADeviceServer_2018_10_18_18_18_22/
 ├── CMakeLists.txt				// FIXME : add path to device driver models
 └── src-gen
