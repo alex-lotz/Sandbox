@@ -399,13 +399,13 @@ output_OPCUADeviceServer
         ├── AbstractModel.hh
         ├── AbstractModelObserver.cc
         ├── AbstractModelObserver.hh
-        ├── CMakeLists.txt				// FIXME : add path to device driver models
-        ├── OPCUADeviceServerController.cc		// FIXME : implement all getter setter and call methods
+        ├── CMakeLists.txt			// FIXME : add path to device driver models
+        ├── OPCUADeviceServerController.cc	// FIXME : implement all getter setter and call methods
         ├── OPCUADeviceServerController.hh
-        ├── OPCUADeviceServerServerMain.cc		// FIXME : use your specific model instead of the AbstractModel
-        ├── OPCUADeviceServerView.cc			// FIXME1: use your specific model instead of the AbstractModel
-    							// FIXME2: implement OPCUADeviceServerView::update() method
-        ├── OPCUADeviceServerView.hh			// FIXME : use your specific model instead of the AbstractModel
+        ├── OPCUADeviceServerServerMain.cc	// FIXME : use your specific model instead of the AbstractModel
+        ├── OPCUADeviceServerView.cc		// FIXME1: use your specific model instead of the AbstractModel
+    						// FIXME2: implement OPCUADeviceServerView::update() method
+        ├── OPCUADeviceServerView.hh		// FIXME : use your specific model instead of the AbstractModel
         ├── OpcUaOPCUADeviceServer.cc
         └── OpcUaOPCUADeviceServer.hh
 	
