@@ -369,7 +369,7 @@ java -jar Open62541XmlCompiler.jar OPCUADeviceServer.xml ALL
 ```
 
 ![IMG11](IMG12_Compiling_nodeset_XML.png)
----------------------------------------------------------------------------------#FIXME Add GenericClient files to this
+
 ```
 Compilation output:
 output_OPCUADeviceServer
