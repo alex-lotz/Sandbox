@@ -34,3 +34,16 @@ $ ./server
 #### Open a Prosys OPC UA client to view/edit server nodes
 **Address**: opc.tcp://<*IP address of server* / *localhost*>:4840
 ![IMG04](IMG04_View_in_OPCUA_client.png)
+
+
+
+
+
+# Making a simple server using Open62541 XmlCompiler
+## Step 1: Encoding server namespace in XML
+## Step 2: Compiling server namespace XML to generate cpp gen-code
+## Step 3: Device driver models
+## Step 4: Configuring generate code for a particular device driver model
+## Step 5: Writing the device controller code
+## Step 6: Compiling and running the server
+## Step 7: Observing server behaviour using any OPC-UA client and server's HTML View
