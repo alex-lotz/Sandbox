@@ -13,7 +13,7 @@ $ cd open62541
 $ git submodule init
 $ git submodule update
 ```
-[![IMG01](Sandbox/01 Cloning open62541.png)]
+[![IMG01](Sandbox/IMG01_Cloning_open62541.png)]
 
 #### Building open62541
 ```sh
