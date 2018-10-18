@@ -1,5 +1,5 @@
 
-# Getting started with open62541 library
+# Getting started with the open62541 library
 
 
 #### Arranging prerequisites
