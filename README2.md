@@ -9,9 +9,9 @@ Following is an information model for a server.
 ```
 OPCUADeviceServer
 |--isReady        	(Boolean    ReadOnly)
-|--pumpWater        	(Method        Input:Time in seconds    Output:result code)
-|--start_Ventilator     (Method        Input:VentilatorID    Output:result code)
-|--start_Ventilator     (Method        Input:VentilatorID    Output:result code)
+|--pumpWater        	(Method	    Input:Time in seconds Output:result code)
+|--start_Ventilator     (Method     Input:VentilatorID    Output:result code)
+|--start_Ventilator     (Method     Input:VentilatorID    Output:result code)
 |--LED_RED        	(Boolean    Read/Write)
 |--LED_YELLOW       	(Boolean    Read/Write)
 |--LED_GREEN        	(Boolean    Read/Write)
