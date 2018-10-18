@@ -5,7 +5,7 @@ An OPC-UA information model can be encoded according to OPC-UA nodeset schema (L
 
 
 Following is an information model for a server. 
-
+```
 OPCUADeviceServer
 |--isReady		(Boolean	ReadOnly)
 |--pumpWater		(Method		Input:Time in seconds	Output:result code)
@@ -14,7 +14,7 @@ OPCUADeviceServer
 |--LED_RED		(Boolean	Read/Write)
 |--LED_YELLOW		(Boolean	Read/Write)
 |--LED_GREEN		(Boolean	Read/Write)
-
+```
 Following is a step-by-step walkthrough for generating an OPC-UA server from an given information model. 
 
 ## Step 1: Encoding server nodeset
