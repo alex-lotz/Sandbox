@@ -24,6 +24,7 @@ The information model for OPCUADeviceServer can be encoded according to OPC-UA n
 
 <details><summary>View File Content</summary>
 <p>
+	
 ```XML
 <UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
