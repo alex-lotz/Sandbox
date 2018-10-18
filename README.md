@@ -34,9 +34,7 @@ $ ./server
 #### Open a Prosys OPC UA client to view/edit server nodes
 **Address**: opc.tcp://<*IP address of server* / *localhost*>:4840
 ![IMG04](IMG04_View_in_OPCUA_client.png)
-
-
-
+![VID](VID03_Running_Examples.webm)
 
 
 # Making a simple server using Open62541 XmlCompiler
