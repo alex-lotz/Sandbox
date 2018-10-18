@@ -8,13 +8,13 @@ An OPC-UA information model can be encoded according to OPC-UA nodeset schema (L
 Following is an information model for a server. 
 ```
 OPCUADeviceServer
-|--isReady        (Boolean    ReadOnly)
-|--pumpWater        (Method        Input:Time in seconds    Output:result code)
-|--start_Ventilator    (Method        Input:VentilatorID    Output:result code)
-|--start_Ventilator    (Method        Input:VentilatorID    Output:result code)
-|--LED_RED        (Boolean    Read/Write)
-|--LED_YELLOW        (Boolean    Read/Write)
-|--LED_GREEN        (Boolean    Read/Write)
+|--isReady        	(Boolean    ReadOnly)
+|--pumpWater        	(Method        Input:Time in seconds    Output:result code)
+|--start_Ventilator     (Method        Input:VentilatorID    Output:result code)
+|--start_Ventilator     (Method        Input:VentilatorID    Output:result code)
+|--LED_RED        	(Boolean    Read/Write)
+|--LED_YELLOW       	(Boolean    Read/Write)
+|--LED_GREEN        	(Boolean    Read/Write)
 ```
 Following is a step-by-step walkthrough for generating an OPC-UA server from a given information model. 
 
