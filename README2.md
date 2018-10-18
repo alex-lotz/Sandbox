@@ -369,27 +369,28 @@ java -jar Open62541XmlCompiler.jar OPCUADeviceServer.xml ALL
 ```
 
 ![IMG11](IMG12_Compiling_server_nodeset_XML.png)
-
+---------------------------------------------------------------------------------#FIXME Add GenericClient files to this
 ```
 Compilation output:
 output_OPCUADeviceServer_2018_10_18_18_18_22/
-├── CMakeLists.txt				**CMAKE File**
+├── CMakeLists.txt				// FIXME : add path to device driver models
 └── src-gen
     ├── AbstractModel.cc
     ├── AbstractModel.hh
     ├── AbstractModelObserver.cc
     ├── AbstractModelObserver.hh
     ├── enumMethodCallStatusCode.hh
-    ├── OPCUADeviceServerController.cc
+    ├── OPCUADeviceServerController.cc		// FIXME : implement all getter setter and call methods
     ├── OPCUADeviceServerController.hh
     ├── OPCUADeviceServerInterface.hh
     ├── OPCUADeviceServerOpcUaClient.cc
     ├── OPCUADeviceServerOpcUaClient.hh
     ├── OPCUADeviceServerOpcUaServer.cc
     ├── OPCUADeviceServerOpcUaServer.hh
-    ├── OPCUADeviceServerServerMain.cc
-    ├── OPCUADeviceServerView.cc
-    ├── OPCUADeviceServerView.hh
+    ├── OPCUADeviceServerServerMain.cc		// FIXME : use your specific model instead of the AbstractModel
+    ├── OPCUADeviceServerView.cc		// FIXME1: use your specific model instead of the AbstractModel
+    						// FIXME2: implement OPCUADeviceServerView::update() method
+    ├── OPCUADeviceServerView.hh		// FIXME : use your specific model instead of the AbstractModel
     ├── ValueType.cc
     └── ValueType.hh
 
