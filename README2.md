@@ -22,6 +22,8 @@ Following is a step-by-step walkthrough for generating an OPC-UA server from a g
 
 The information model for OPCUADeviceServer can be encoded according to OPC-UA nodeset schema to generate the following XML file.
 
+<details><summary>View File Content</summary>
+<p>
 ```XML
 <UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
@@ -347,6 +349,9 @@ The information model for OPCUADeviceServer can be encoded according to OPC-UA n
 </UANodeSet>
 
 ```
+</p>
+</details>
+
 ## Step 2: Compiling server nodeset XML to generate cpp gen-code
 ## Step 3: Device driver models
 ## Step 4: Configuring generate code for a particular device driver model
