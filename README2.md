@@ -406,7 +406,7 @@ output_OPCUADeviceServer
         ├── OPCUADeviceServerView.cc		// FIXME1: use your specific model instead of the AbstractModel
     						// FIXME2: implement OPCUADeviceServerView::update() method
         ├── OPCUADeviceServerView.hh		// FIXME : use your specific model instead of the AbstractModel
-        ├── OpcUaOPCUADeviceServer.cc
+        ├── OpcUaOPCUADeviceServer.cc		// OPTIONAL: Modify HTMLMirror method to include graphic elements
         └── OpcUaOPCUADeviceServer.hh
 	
 ```
