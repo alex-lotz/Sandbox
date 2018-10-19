@@ -682,11 +682,8 @@ DEMO_OPCUADevice/build$ make
 DEMO_OPCUADevice/build$ cd src-gen/server/
 DEMO_OPCUADevice/build/src-gen/server$ ./OPCUADeviceServer
 ```
-<details><summary>View Execution</summary>
-<p>
 ![IMG16](IMG16_BuildingServer.png)
 ![IMG17](IMG17_RunningServer.png)
-</p>
-</details>
+
 
 ## Step 7: Observing server behaviour using any OPC-UA client and server HTML View
