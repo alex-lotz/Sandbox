@@ -687,3 +687,21 @@ DEMO_OPCUADevice/build/src-gen/server$ ./OPCUADeviceServer
 
 
 ## Step 7: Observing server behaviour using any OPC-UA client and server HTML View
+Once the server is running, the device can be accessed and operated using any OPC-UA client. Following are some use-cases for our server using Prosys OPC-UA client (Link: <https://www.prosysopc.com/products/opc-ua-client/>).
+
+##### OPCUADeviceServer node space
+![IMG18a](IMG18a_Observing_Server_OPCUA_Client.png)
+
+##### Calling server method "pumpWater"
+![IMG18b](IMG18b_Observing_Server_OPCUA_Client.png)
+
+##### Writing a value to server node "LED_GREEN" (AccessLevel: CurrentRead + CurrentWrite)
+![IMG18c](IMG18c_Observing_Server_OPCUA_Client.png)
+
+##### Trying to Write a value to server node "isReady" (AccessLevel: CurrentRead)
+![IMG18d](IMG18d_Observing_Server_OPCUA_Client.png)
+
+
+
+
+
