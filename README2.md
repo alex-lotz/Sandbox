@@ -495,7 +495,7 @@ FIND_PACKAGE(Open62541CppWrapper PATHS ${PROJECT_SOURCE_DIR}/../Open62541CppWrap
 INCLUDE_DIRECTORIES(
 	${PROJECT_SOURCE_DIR}
 	${PROJECT_SOURCE_DIR}/..
-	<b style='color:red'>Path/To/DeviceDriverModel</b>
+	Path/To/DeviceDriverModel
 )
 
 # setup server source files
@@ -524,17 +524,12 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES
 
 ### Configuring generate code
 
-<details><summary>View File Content</summary>
-<p>
-</p>
-</details>	
+The following files require to be configured for a device-specific model instead of the AbstractModel.
+
 ```
-├── OPCUADeviceServerServerMain.cc	// FIXME : use your specific model instead of the AbstractModel
-        ├── OPCUADeviceServerView.cc		// FIXME1: use your specific model instead of the AbstractModel
-    						// FIXME2: implement OPCUADeviceServerView::update() method
-        ├── OPCUADeviceServerView.hh		// FIXME : use your specific model instead of the AbstractModel
-        ├── OpcUaOPCUADeviceServer.cc		// OPTIONAL: Modify HTMLMirror method to include graphic elements
-        └── OpcUaOPCUADeviceServer.hh
+OPCUADeviceServerServerMain.cc
+OPCUADeviceServerView.cc	
+OPCUADeviceServerView.hh	
 ```
 
 ## Step 5: Writing the device controller code
