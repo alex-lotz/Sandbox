@@ -701,6 +701,10 @@ Once the server is running, the device can be accessed and operated using any OP
 ##### Trying to Write a value to server node "isReady" (AccessLevel: CurrentRead)
 ![IMG18d](IMG18d_Observing_Server_OPCUA_Client.png)
 
+On the first read access, the server creates an HTML file "OPCUADeviceServer_Mirror.html" in the folder "src-gen". This file mirrors and displays the state of the server's node set. The compiler generated file "OpcUaOPCUADeviceServer.cc" contains a method "HTMLMirror" which implements an elementary generator code for the file "OPCUADeviceServer_Mirror.html". The method "HTMLMirror" can be modified to add more details and/or visual elements to "OPCUADeviceServer_Mirror.html" which can then be used to observe the state of the server's node set.
+
+##### Default "OPCUADeviceServer_Mirror.html"
+![IMG19](IMG19_Observing_Server_HTML.png)
 
 
 
