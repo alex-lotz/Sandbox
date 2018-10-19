@@ -423,30 +423,14 @@ DeviceDriverModel.h
 #define DeviceDRIVERMODEL_H_
 
 #include "AbstractModel.hh"
-#include <set>
-// C++11
-#include <mutex>
-#include <thread>
-#include <chrono>
-#include <atomic>
-#include <condition_variable>
 
 namespace Smart {
 
 class DeviceDriverModel : public AbstractModel {
-private:
-	// internal thread handle
-	std::thread thr;
-	std::mutex thread_mutex;
-	std::atomic<bool> cancel_thread;
-
-protected:
-	// internal thread method
-	void on_execute();
 
 public:
 	/// default constructor
-	DeviceDriverModel(const bool &startInternalThread=true);
+	DeviceDriverModel(const bool &startInternalThread=false);
 	/// default destructor
 	virtual ~DeviceDriverModel();
 
@@ -461,8 +445,8 @@ public:
 	bool PumpON();
 	bool PumpOFF();
 
-	bool VentilatorON();
-	bool VentilatorOFF();
+	bool VentilatorON(const uint8_t &id);
+	bool VentilatorOFF(const uint8_t &id);
 
 	bool getLED(const uint8_t &n); // n:0/1/2
 	bool setLED(const uint8_t &n, const bool &value); // n:0/1/2
@@ -647,7 +631,7 @@ bool OPCUADeviceServerController::callPumpWater(const int &ForTimeSeconds,std::s
 }
 bool OPCUADeviceServerController::callStart_Ventilator(const int &VentilatorID,std::string &Result)
 {
-	bool status = view->getModel()->VentilatorON();
+	bool status = view->getModel()->VentilatorON(VentilatorID);
 	if(status)
 	{
 		Result = "SUCCESS";
@@ -661,7 +645,7 @@ bool OPCUADeviceServerController::callStart_Ventilator(const int &VentilatorID,s
 }
 bool OPCUADeviceServerController::callStop_Ventilator(const int &VentilatorID,std::string &Result)
 {
-	bool status = view->getModel()->VentilatorOFF();
+	bool status = view->getModel()->VentilatorOFF(VentilatorID);
 	if(status)
 	{
 		Result = "SUCCESS";
@@ -689,4 +673,20 @@ int OPCUADeviceServerController::run()
 </details>
 
 ## Step 6: Compiling and running the server
+
+```sh
+DEMO_OPCUADevice$ mkdir build
+DEMO_OPCUADevice$ cd build
+DEMO_OPCUADevice/build$ cmake ..
+DEMO_OPCUADevice/build$ make
+DEMO_OPCUADevice/build$ cd src-gen/server/
+DEMO_OPCUADevice/build/src-gen/server$ ./OPCUADeviceServer
+```
+<details><summary>View Execution</summary>
+<p>
+![IMG16](IMG16_BuildingServer.png)
+![IMG17](IMG17_RunningServer.png)
+</p>
+</details>
+
 ## Step 7: Observing server behaviour using any OPC-UA client and server HTML View
