@@ -495,7 +495,7 @@ FIND_PACKAGE(Open62541CppWrapper PATHS ${PROJECT_SOURCE_DIR}/../Open62541CppWrap
 INCLUDE_DIRECTORIES(
 	${PROJECT_SOURCE_DIR}
 	${PROJECT_SOURCE_DIR}/..
-	${PROJECT_SOURCE_DIR}/../../../DeviceDriverModel
+	<b style='color:red'>Path/To/DeviceDriverModel</b>
 )
 
 # setup server source files
@@ -506,7 +506,7 @@ SET(SERVER_SRCS
 	${PROJECT_SOURCE_DIR}/OPCUADeviceServerController.cc
 	${PROJECT_SOURCE_DIR}/OpcUaOPCUADeviceServer.cc
 	${PROJECT_SOURCE_DIR}/OPCUADeviceServerServerMain.cc
-	${PROJECT_SOURCE_DIR}/../../../DeviceDriverModel/DeviceDriverModel.cpp
+	Path/To/DeviceDriverModel/DeviceDriverModel.cpp
 )
 
 # create server test executable
@@ -521,8 +521,8 @@ SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES
 	
 </p>
 </details>	
-### Configuring generate code
 
+### Configuring generate code
 
 <details><summary>View File Content</summary>
 <p>
