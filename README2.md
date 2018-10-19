@@ -531,13 +531,13 @@ OPCUADeviceServerServerMain.cc
 OPCUADeviceServerView.hh	
 OPCUADeviceServerView.cc	
 ```
-#### OPCUADeviceServerServerMain.cc
+##### OPCUADeviceServerServerMain.cc
 ![IMG13](IMG13_Changes_In_OPCUADeviceServerServerMaincc.png)
 
-#### OPCUADeviceServerView.hh	
+##### OPCUADeviceServerView.hh	
 ![IMG14](IMG14_Changes_In_OPCUADeviceServerViewcc.png)
 
-#### OPCUADeviceServerView.cc	
+##### OPCUADeviceServerView.cc	
 ![IMG15](IMG15_Changes_In_OPCUADeviceServerViewhh.png)
 
 ## Step 5: Writing the device controller code
