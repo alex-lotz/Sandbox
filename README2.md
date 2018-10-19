@@ -474,6 +474,7 @@ public:
 ```
 </p>
 </details>
+
 ## Step 4: Configuring generate code for a particular device driver model
 ## Step 5: Writing the device controller code
 ## Step 6: Compiling and running the server
