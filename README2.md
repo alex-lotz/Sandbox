@@ -411,7 +411,7 @@ output_OPCUADeviceServer
 	
 ```
 ## Step 3: Device driver models
-A device driver model is a derived class that publically inherits the "AbstractModel" class and implements methods to derive the physical device. For our example server, we have the following device driver model.
+A device driver model is a derived class that publically inherits the "AbstractModel" class and implements methods to drive the physical device. For our example server, we have the following device driver model.
 ```
 DeviceDriverModel.h
 ```
