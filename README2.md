@@ -528,9 +528,17 @@ The following files require to be configured for a device-specific model instead
 
 ```
 OPCUADeviceServerServerMain.cc
-OPCUADeviceServerView.cc	
 OPCUADeviceServerView.hh	
+OPCUADeviceServerView.cc	
 ```
+#### OPCUADeviceServerServerMain.cc
+![IMG13](IMG13_Changes_In_OPCUADeviceServerServerMaincc.png)
+
+#### OPCUADeviceServerView.hh	
+![IMG14](IMG14_Changes_In_OPCUADeviceServerViewcc.png)
+
+#### OPCUADeviceServerView.cc	
+![IMG15](IMG15_Changes_In_OPCUADeviceServerViewhh.png)
 
 ## Step 5: Writing the device controller code
 ## Step 6: Compiling and running the server
