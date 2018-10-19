@@ -378,8 +378,8 @@ output_OPCUADeviceServer
     ├── client
     │   ├── CMakeLists.txt
     │   ├── OPCUADeviceServerClientMain.cc
-    │   ├── OpcUaOPCUADeviceServer.cc
-    │   └── OpcUaOPCUADeviceServer.hh
+    │   ├── OpcUaOPCUADeviceClient.cc
+    │   └── OpcUaOPCUADeviceClient.hh
     ├── CMakeLists.txt
     ├── OPCUADeviceServerInterface.hh
     ├── Open62541CppWrapper
@@ -706,6 +706,11 @@ On the first read access, the server creates an HTML file "OPCUADeviceServer_Mir
 ##### Default "OPCUADeviceServer_Mirror.html"
 ![IMG19](IMG19_Observing_Server_HTML.png)
 
-
-
+## Step 8: Accessing server using OpcUaOPCUADeviceClient
+The compiler generated file "OPCUADeviceServerClientMain.cc" contains an elementary client implementation to access and test the device server. The user may modify the file to implement a practical client implementation.
+```sh
+DEMO_OPCUADevice/build$ cd src-gen/client
+DEMO_OPCUADevice/build/src-gen/client$ ./OPCUADeviceServerClientTest
+```
+![IMG20](IMG20_GenericClient_ServerTest.png)
 
