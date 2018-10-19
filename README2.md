@@ -476,6 +476,67 @@ public:
 </details>
 
 ## Step 4: Configuring generate code for a particular device driver model
+### Adding path to device driver model in CMakeList.txt
+<details><summary>View Changes</summary>
+<p>
+	
+```
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+
+PROJECT(OPCUADeviceServer)
+
+# find Open62541CppWrapper as the main dependency
+FIND_PACKAGE(open62541 PATHS /usr/local/lib/cmake)
+
+# FIND_PACKAGE(Open62541CppWrapper)
+FIND_PACKAGE(Open62541CppWrapper PATHS ${PROJECT_SOURCE_DIR}/../Open62541CppWrapper)
+
+# setup default include directoy
+INCLUDE_DIRECTORIES(
+	${PROJECT_SOURCE_DIR}
+	${PROJECT_SOURCE_DIR}/..
+	${PROJECT_SOURCE_DIR}/../../../DeviceDriverModel
+)
+
+# setup server source files
+SET(SERVER_SRCS
+	${PROJECT_SOURCE_DIR}/AbstractModel.cc
+	${PROJECT_SOURCE_DIR}/AbstractModelObserver.cc
+	${PROJECT_SOURCE_DIR}/OPCUADeviceServerView.cc
+	${PROJECT_SOURCE_DIR}/OPCUADeviceServerController.cc
+	${PROJECT_SOURCE_DIR}/OpcUaOPCUADeviceServer.cc
+	${PROJECT_SOURCE_DIR}/OPCUADeviceServerServerMain.cc
+	${PROJECT_SOURCE_DIR}/../../../DeviceDriverModel/DeviceDriverModel.cpp
+)
+
+# create server test executable
+ADD_EXECUTABLE(${PROJECT_NAME} ${SERVER_SRCS})
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} Open62541CppWrapper rt crypt pthread)
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES
+    CXX_STANDARD 11
+)
+#TARGET_COMPILE_DEFINITIONS(${PROJECT_NAME} PUBLIC HAS_OPCUA)
+
+```
+	
+</p>
+</details>	
+### Configuring generate code
+
+
+<details><summary>View File Content</summary>
+<p>
+</p>
+</details>	
+```
+├── OPCUADeviceServerServerMain.cc	// FIXME : use your specific model instead of the AbstractModel
+        ├── OPCUADeviceServerView.cc		// FIXME1: use your specific model instead of the AbstractModel
+    						// FIXME2: implement OPCUADeviceServerView::update() method
+        ├── OPCUADeviceServerView.hh		// FIXME : use your specific model instead of the AbstractModel
+        ├── OpcUaOPCUADeviceServer.cc		// OPTIONAL: Modify HTMLMirror method to include graphic elements
+        └── OpcUaOPCUADeviceServer.hh
+```
+
 ## Step 5: Writing the device controller code
 ## Step 6: Compiling and running the server
 ## Step 7: Observing server behaviour using any OPC-UA client and server HTML View
