@@ -411,6 +411,68 @@ output_OPCUADeviceServer
 	
 ```
 ## Step 3: Device driver models
+A device driver model is a derived class that publically inherits the "AbstractModel" class and implements methods to derive the physical device. For our example server, we have the following device driver model.
+```
+DeviceDriverModel.h
+```
+<details><summary>View File Content</summary>
+<p>
+```CPP
+#ifndef DeviceDRIVERMODEL_H_
+#define DeviceDRIVERMODEL_H_
+
+#include "AbstractModel.hh"
+#include <set>
+// C++11
+#include <mutex>
+#include <thread>
+#include <chrono>
+#include <atomic>
+#include <condition_variable>
+
+namespace Smart {
+
+class DeviceDriverModel : public AbstractModel {
+private:
+	// internal thread handle
+	std::thread thr;
+	std::mutex thread_mutex;
+	std::atomic<bool> cancel_thread;
+
+protected:
+	// internal thread method
+	void on_execute();
+
+public:
+	/// default constructor
+	DeviceDriverModel(const bool &startInternalThread=true);
+	/// default destructor
+	virtual ~DeviceDriverModel();
+
+	/// start the internally used thread
+	void startThread();
+	/// stop the internally used thread
+	void stopThread(const bool &waitTillStopped=true);
+
+	bool isReady;
+	bool getISREADY();
+
+	bool PumpON();
+	bool PumpOFF();
+
+	bool VentilatorON();
+	bool VentilatorOFF();
+
+	bool getLED(const uint8_t &n); // n:0/1/2
+	void setLED(const uint8_t &n); // n:0/1/2
+};
+
+} /* namespace Smart */
+
+#endif /* DeviceDRIVERMODEL_H_ */
+```
+</p>
+</details>
 ## Step 4: Configuring generate code for a particular device driver model
 ## Step 5: Writing the device controller code
 ## Step 6: Compiling and running the server
