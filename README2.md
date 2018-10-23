@@ -378,8 +378,8 @@ output_OPCUADeviceServer
     ├── client
     │   ├── CMakeLists.txt
     │   ├── OPCUADeviceServerClientMain.cc
-    │   ├── OpcUaOPCUADeviceClient.cc
-    │   └── OpcUaOPCUADeviceClient.hh
+    │   ├── OpcUaOPCUADeviceServer.cc
+    │   └── OpcUaOPCUADeviceServer.hh
     ├── CMakeLists.txt
     ├── OPCUADeviceServerInterface.hh
     ├── Open62541CppWrapper
