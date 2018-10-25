@@ -20,6 +20,7 @@ $ git submodule update
 $ mkdir build
 $ cd build
 $ cmake -DUA_ENABLE_AMALGAMATION=ON -DUA_ENABLE_METHODCALLS=ON -DUA_NAMESPACE_ZERO=FULL -DUA_ENABLE_SUBSCRIPTIONS=ON ..
+$ make
 $ sudo make install
 ```
 ![IMG02](IMG02_Building_open62541.png)
